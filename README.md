@@ -12,7 +12,7 @@ There are many unsupported platforms for Pluralsight. As an example, it may be n
 
 [nightmare](https://github.com/segmentio/nightmare) is used for simulating a browser. This is needed for logging in, finding the course videos, and downloading them.
 
-[system-sleep] () is used to throttle downloading.
+[system-sleep] (https://github.com/jochemstoel/nodejs-system-sleep) is used to throttle downloading.
 
 ## Usage
 
