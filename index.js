@@ -87,14 +87,9 @@ void async function() {
             // Save the file
             console.log("Saving course video: " + course.videos[i].name + ".");
             var file = fs.createWriteStream("videos/" + course.title + "/" + number + ". " + course.videos[i].name.replace("/", "") + ".mp4");
-            var done = false;
-            var request = https.get(course.videos[i].src,(response) => {
+            await https.get(course.videos[i].src,(response) => {
                 response.pipe(file);
-                done = true;
             });
-            while (!done) {
-                sleep(1000);
-            }
         }
         sleep(config.sleepTime);
     }
