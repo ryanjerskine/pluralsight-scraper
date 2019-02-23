@@ -30,7 +30,7 @@ void async function() {
         .wait(5000)
         .evaluate(function() {
             var courseVideos = [];
-            document.querySelectorAll(".table-of-contents__clip-list-item a").forEach((course) => {
+            document.querySelectorAll("h3 a[target=psplayer]").forEach((course) => {
                 courseVideos.push({
                     name: course.text.replace("?", "").replace("/", "").replace("|", "").replace("\\", "").replace("*", "").replace("<", "").replace(">", "").replace(":", ""),
                     url: course.href,
